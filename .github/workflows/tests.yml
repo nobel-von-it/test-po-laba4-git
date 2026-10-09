@@ -32,6 +32,7 @@ jobs:
         pytest test_api.py -v --junitxml=report-api.xml
 
     - name: Run UI Tests (Smoke)
+      if: always()
       run: |
         cd laba3/tests
         pytest test_registration.py -v --junitxml=report-ui.xml
